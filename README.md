@@ -13,10 +13,7 @@ This repository contains the daily challenges of the third week's afternoon sess
 
 ## Instructions
 * Download the .zip file
-* or use
-  ```
-  git clone https://github.com/mmousiou/Bootcamp--23---Week-3-challenges.git
-  ```
+* Please don't commit your individual work to this repository.
 * Each folder represents a specific challenge.
 * Read the README.md files and follow the instructions given to you during the bootcamp for each challenge.
 
