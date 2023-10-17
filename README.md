@@ -21,5 +21,5 @@ This repository contains the challenges for the Bootcamp 2023 - Week 3.
 * Read the README.md files and follow the instructions given to you during the bootcamp for each challenge.
 
 ## Info
-Autlhors: mmousiou@gmail.com, nikaxilleas@gmail.com
+Authors: mmousiou@gmail.com, nikaxilleas@gmail.com
   
