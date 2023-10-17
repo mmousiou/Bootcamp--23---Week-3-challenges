@@ -11,7 +11,7 @@ This repository contains the daily challenges of the third week's afternoon sess
 
 - [Pokedex Challenge](https://github.com/mmousiou/Bootcamp--23---Week-3-challenges/blob/main/Pokedex--Bootcamp---Week3-challenge/README.md)
 
-- Final Excercise to be added
+- [Final Excercise] (to be added)
   
 - [Info](#info)
 
