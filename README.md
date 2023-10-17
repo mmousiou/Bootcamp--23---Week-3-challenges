@@ -1,5 +1,5 @@
 # 🏆Bootcamp '23 - Week-3 challenges
-This repository contains the challenges for the Bootcamp 2023 - Week 3.
+This repository contains the daily challenges of the third week's afternoon sessions.
 
 ## Table of contents
 
