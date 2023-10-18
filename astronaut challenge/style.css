@@ -11,9 +11,6 @@ body{
 }
 
 /* #5. add a class name hidden which will modify the display attribute to none */
-.hidden {
-  display: none;
-}
 
 .title {
   position:absolute;
