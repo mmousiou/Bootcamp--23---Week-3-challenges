@@ -74,3 +74,4 @@
     </div>
 2. (.js) Add a variable and save the '.showLess' element
 3. Add an click event listener to the element and in the callback function add hidden to the outcome element
+***********************************************************************************************************************************
