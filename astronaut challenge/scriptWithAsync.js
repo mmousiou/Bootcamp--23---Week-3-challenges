@@ -11,6 +11,9 @@
 
 'use strict';
 
+// #1-#4 are in index.html
+// #5 is in the style.css
+
 /* #6. Add a variable to store the button element added on the html, 
        you can use getElementById method of the document element to access the button */
 const outcomeEL = document.querySelector('.outcome');
@@ -57,6 +60,7 @@ async function fetchData() {
             b. Add the line to moreInfoOutput string
             c. print the moreInfoOutput in the '.outcome__people__info' element
     */
+    /* #12. Print the moreInfoOutput in the '.outcome__people__info' element */
   } catch (err) {
     console.error(err)
   }
