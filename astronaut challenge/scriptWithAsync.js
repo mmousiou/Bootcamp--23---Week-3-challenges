@@ -1,6 +1,6 @@
 /**
- * @title Astronaut App - Solution
- * @author mmousiou@gmail.com (Maria Mousiou)
+ * @title How Many people are in space 🧑‍🚀?
+ * @author yourName 👽 
  * @fileoverview 
  * * Application that calls an API and gets the current number of people in space, 
  *   their names and their spacecrafts.
@@ -64,7 +64,7 @@ const callApi = async function () {
     
     let string = ''
     people.forEach(item => {
-      const temp = `<p>&nbsp🧑‍🚀${item.name}, 🚀${item.craft}</p>`
+      const temp = `<p>&nbsp🧑${item.name}, 🚀${item.craft}</p>`
       string += temp
     })
   
