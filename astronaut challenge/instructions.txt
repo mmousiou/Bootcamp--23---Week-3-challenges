@@ -39,27 +39,27 @@
 ***********************************************************************************************************************************
 
 ************************************************ Part 2 (5 mins) ******************************************************************
-1. Copy the scriptWithAsync.js and paste it in the same folder but rename it 'scriptWithThen.js'
-2. Remove the async...await of the functions along with the result and data variable assignment inside the fetchData
-3. Use the fetchPromise.then(response => get response json).then(data => {move all the logic from console.log(data) until the end of try block})
+13. Copy the scriptWithAsync.js and paste it in the same folder but rename it 'scriptWithThen.js'
+14. Remove the async...await of the functions along with the result and data variable assignment inside the fetchData
+15. Use the fetchPromise.then(response => get response json).then(data => {move all the logic from console.log(data) until the end of try block})
     help: https://www.developerway.com/posts/fetching-in-react-lost-promises
     You can keep the try...catch or replace it with .catch((err) => {handle error})
-4. In the html replace the src of the script tag to point to 'scriptWithThen.js'
-5. The results are rendering twice (once with the initial values and once with the correct values) can you explain why?
+16. In the html replace the src of the script tag to point to 'scriptWithThen.js'
+17. The results are rendering twice (once with the initial values and once with the correct values) can you explain why?
 ***********************************************************************************************************************************
 
 ************************************************ Part 3 (10 mins) ******************************************************************
-1. Switch back to 'scriptWithAsync.js'
-2. Replace the Calculate text inside the button block with this:
+18. Switch back to 'scriptWithAsync.js'
+19. Replace the Calculate text inside the button block with this:
     <span class="btn__label">calculate</span>
     <span class="loader">
-      <span class="loader__element"></span>
-      <span class="loader__element"></span>
-      <span class="loader__element"></span>
+        <span class="loader__element"></span>
+        <span class="loader__element"></span>
+        <span class="loader__element"></span>
     </span>
-3. In the js file add in the beggining two more variables, one to select the '.loader' and one to select the '.btn__label' elements.
-4. In the init the style.display attribute to hide the '.loader' element (it's the same logic as the hidden class)
-5. In the calculate callback function we should have the logic
+20. In the js file add in the beggining two more variables, one to select the '.loader' and one to select the '.btn__label' elements.
+21. In the init the style.display attribute to hide the '.loader' element (it's the same logic as the hidden class)
+22. In the calculate callback function we should have the logic
     hide btn label (add hidden class)
     show loading dots (style.display = 'flex')
     ***** fetching data ******
@@ -68,10 +68,11 @@
 ***********************************************************************************************************************************
 
 ************************************************ Part 4 (5 mins) ******************************************************************
-1. (html) Inside the outcome div add after the last <p> element
+23. (html) Inside the outcome div add after the last <p> element
     <div>
-      <a href="" class="showLess" target="">>> Hide Results</a>
+        <a href="" class="showLess" target="">>> Hide Results</a>
     </div>
-2. (.js) Add a variable and save the '.showLess' element
-3. Add an click event listener to the element and in the callback function add hidden to the outcome element
+24. (.js) Add a variable and save the '.showLess' element
+25. Add an click event listener to the element and in the callback function add hidden to the outcome element
 ***********************************************************************************************************************************
+Congradulations you finshed the challenge!!!!🎉🎉💫✨🌟

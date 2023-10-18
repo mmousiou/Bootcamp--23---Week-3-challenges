@@ -1,5 +1,5 @@
 /**
- * @title How Many people are in space 🧑‍🚀?
+ * @title How Many people are in space 🧑‍🚀? (Parts 3 - steps 25)
  * @author yourName 👽 
  * @fileoverview 
  * * Application that calls an API and gets the current number of people in space, 
@@ -64,4 +64,5 @@ async function fetchData() {
   } catch (err) {
     console.error(err)
   }
+  // when finished with the step 12 you can see the next part in the instructions.txt
 }
