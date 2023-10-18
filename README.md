@@ -4,6 +4,8 @@ This repository contains the daily challenges of the third week's afternoon sess
 ## Table of contents
 
 - [Instructions](#Instructions)
+
+- [Code Logger]()
   
 - [Astronaut Challenge](https://github.com/mmousiou/Bootcamp--23---Week-3-challenges/blob/main/astronaut%20challenge/README.md)
 
