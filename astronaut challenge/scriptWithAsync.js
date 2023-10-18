@@ -1,5 +1,6 @@
 /**
- * @title How Many people are in space 🧑‍🚀? (Parts 3 - steps 25)
+ * @title How Many people are in space 🧑‍🚀? 
+ * @description Parts: 3, Steps 25, duration: ~ 1h)
  * @author yourName 👽 
  * @fileoverview 
  * * Application that calls an API and gets the current number of people in space, 
