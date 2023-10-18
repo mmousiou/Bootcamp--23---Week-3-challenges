@@ -1,5 +1,5 @@
 /**
- * @title How Many people are in space 🧑‍🚀? 
+ * @title 💫How Many people are in space? 
  * @description Parts: 3, Steps 25, duration: ~ 1h)
  * @author yourName 👽 
  * @fileoverview 
