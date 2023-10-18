@@ -1,11 +1,11 @@
-<!-- Astronaut App - Solution -->
+<!-- Astronaut Challenge: Complete the instructions numbered with #  -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
+    <!-- #1. link the other two style sheets existing in the astronaut challenge folder -->
     <link rel="stylesheet" href="astronaut.css" />
     <link rel="stylesheet" href="btn_with_loading.css" />
     <title>Astronaut</title>
@@ -13,16 +13,8 @@
   <body>
     <main>
       <div class="title">
-        <h1>How many people are in space?</h1>
-        <!-- Calculate button with onloading dots -->
-        <button id="calculate" class="btn btn--new">
-          <span class="btn__label">calculate</span>
-          <span class="loader">
-            <span class="loader__element"></span>
-            <span class="loader__element"></span>
-            <span class="loader__element"></span>
-          </span>
-        </button>
+        <!-- #2. Add a h1 element with the title "How Many people are in space 🌌?"  -->
+        <!-- #3. Add a button element with the "btn" class and label "Calculate" -->
       </div>
       <!-- Results -->
       <div class="results">
@@ -33,12 +25,9 @@
           <p class='outcome__label'>>> More info (Name, Spacecraft): </p>
           <div class='outcome__label outcome__people__info'></div>
           <p class='outcome__label'>---------------------------------</p>
-          <div>
-            <a href="" class="showLess" target="_blank">>> Hide Results</a>
-          </div>
         </div>
       </div>
-      <!-- Astronaut animation -->
+      <!-- Astronaut animation - Don't modify -->
       <div class="backg">
         <div class="planet">
           <div class="r1"></div>
@@ -110,8 +99,6 @@
         </div>
       </div>
     </main>
-    <!-- Use one of the two script tags below, by commenting / uncommenting the two lines -->
-    <script src="scriptWithAsync.js"></script>
-    <!-- <script src="scriptWithThen.js"></script> -->
+    <!-- #4. Link the scriptWithAsync.js file using <script> tag  -->
   </body>
 </html>

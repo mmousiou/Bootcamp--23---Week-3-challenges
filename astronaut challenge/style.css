@@ -10,6 +10,8 @@ body{
   justify-content:center;
 }
 
+/* #5. add a class name hidden which will modify the display attribute to none */
+
 .title {
   position:absolute;
   display: flex;
@@ -70,8 +72,4 @@ h1{
   font-size: 16px;
   font-weight: normal;
   color: white;
-}
-
-.hidden {
-  display: none;
 }
