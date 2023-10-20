@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>pokemonChallenge</componentName>
+                <identifier>c_pokemonChallenge</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>region1</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentName>pokemon</componentName>
-                <identifier>c_pokemon</identifier>
-            </componentInstance>
-        </itemInstances>
         <name>region2</name>
         <type>Region</type>
     </flexiPageRegions>
@@ -20,7 +20,7 @@
     </flexiPageRegions>
     <masterLabel>Pokemon App</masterLabel>
     <template>
-        <name>flexipage:appHomeTemplateHeaderTwoColumns</name>
+        <name>flexipage:appHomeTemplateTwoColumnsStacked</name>
     </template>
     <type>AppPage</type>
 </FlexiPage>
