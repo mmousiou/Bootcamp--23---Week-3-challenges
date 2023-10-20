@@ -1,0 +1,20 @@
+1. Set the score variable scoreP0 for P1 in the html file. (html - l8)
+2. Set the current score variable currentP0 for P1 in the html file. (html - l11)
+3. Set the score variable scoreP1 for P2 in the html file. (html - l17)
+4. Set the current score variable currentP1 for P2 in the html file. (html - l20)
+
+5. Connect the handleNewBtnClicked() function to the appropriate button element. (html - l24)
+6. Connect the handleRollBtnClicked() function to the appropriate button element. (html - l25)
+7. Connect the handleHoldBtnClicked() function to the appropriate button element. (html - l26)
+
+8. On line 38 in the js file, find a way to reference the element on line 32 in the html file using the data attribute. (js - l38)
+9. On line 61 in the js file, call the appropriate function to switch the player. (js - l61)
+10. Add current score to active player's score on line 70 in the js file (js - l70)
+11. On line 89 in the js file, call the appropriate function to switch the player. (js - l89)
+12. On line 106 remove the class player--winner from the player0El element (also 106)
+13. On line 107 remove the class player--winner from the player1El element (also 107)
+14. On line 116 add the class player--active to the player0El element (also 106)
+15. On line 117 remove the class player--active from the player1El element (also 107)
+
+
+Talk about lines 125 and 127
