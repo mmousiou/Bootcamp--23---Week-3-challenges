@@ -26,7 +26,6 @@ export default class Pokemon extends LightningElement {
         * you can access the input by using event.detail.value 
         * help link: https://developer.salesforce.com/docs/component-library/bundle/lightning-input/example
     */
-
   }
 
   async fetchData () {
