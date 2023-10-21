@@ -1,0 +1,63 @@
+#1. Create a lightning-card with narrow variant, title: Pokedex, icon: standard:contract_line_item 
+#2. In the actions slots of the card put a button with label: Reset Data and onclick bind a method with name "initializeApp". You can style your button red using the right variant!!
+#3. In the javascript file make sure that the method initializeApp () {} exists if not add the method.
+#4. After the button put a div with class="slds-m-around_small", inside the div will be the card-body
+#5. Inside the card body put 
+        a. A div with inline style="display:flex;flex-direction:row;justify-content:flex-start;align-items:flex-end; margin-bottom: 1rem;"
+            This will be the search div.
+        b. A div with class="slds-grid slds-wrap slds-m-around_small slds-border_bottom" this will be the results header
+        c. A similar div as in 5.b without border and with margin around small this will be the results data
+        Inside the <template></template> your structure must be similar to the following
+          <card__div>
+            <reset__button></reset__button>
+            <card-body__div>
+              <search__div>
+              </search__div>
+              <results-header__div>
+              </results-header__div>
+              <results-data__div>
+              </results-data__div>
+            </card-body__div>
+          </card div>                                                                     
+#5. [search__div] Inside the search__div put a lightning input with:
+                  a. label 'Pokemon Name'
+                  b. value: pokemonName (variable initialized to 'charizard')
+                  c. onchange: handleChange (handler method, parameter event)
+                  d. class="slds-m-right_xx-small"
+
+#6. [search__div] Inside the search__div, after the input put a lightning button with:
+                  a. label 'Search Pokemon'
+                  b. variant: "brand"
+                  c. onclick: searchPokemon (handler method, parameter event)
+                  d. disabled: disableSearch (variable initialized to false)
+#7. [.js] In your javascript file make sure that your variables and handler methods exist if not add them.
+#8. [results-header__div] Inside the results-header__div add 4 columns with the same space using the instructions of the slds-grid
+(https://www.lightningdesignsystem.com/utilities/grid/) each one of them must have additional class slds-text-heading_small and the labels of this elements should be: Name, Appearance, Abilities, Stats.
+#9. [results-data__div] we want to show this div only if data exist:
+    a. bind the div with an if directive and show it only if the hasData variable is true Initialized the variable to false
+    b. put the following div after the results-data__div closing tab
+      <div lwc:else class="slds-m-around_large">
+        {errorMessage}
+      </div>
+#10. Inside the results data div put the following code:
+      <div class="slds-size_1-of-4 slds-align-middle">
+        print pokemon's name
+      </div>
+      <div class="slds-size_1-of-4">
+        <img src={currentPokemon.imgUrl}>
+      </div>
+      <div class="slds-size_1-of-4 slds-text-color_weak slds-align-middle">
+        print a list and each item will represent an ability
+      </div>
+      <div class="slds-size_1-of-4 slds-text-color_weak slds-align-middle">
+        <ul>
+          <template for:each={currentPokemon.stats} for:item="stat">
+            <li key={stat}>{stat.name}: {stat.value}</li>
+          </template>
+        </ul>
+      </div>
+#11. Your html is almost done.... Put a lightning spinner inside the card-body__div and before anything else. The spinner will take a variable spinner initialized to false. We will use it to inform the user that something is loading......
+
+
+
+

@@ -3,7 +3,7 @@ import retrievePokemon from '@salesforce/apex/CtrlPokemon.retrievePokemon'
 import LightningAlert from 'lightning/alert'
 
 export default class Pokemon extends LightningElement {
-  /* make sure all the methods and the variables are in the export default */
+  /* make sure all the methods and the variables used in the .html file are in the export default */
   // variable declaration
   @track currentPokemon = {}
   hasData = false
