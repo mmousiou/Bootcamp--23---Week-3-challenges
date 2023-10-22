@@ -19,27 +19,27 @@
               </results-data__div>
             </card-body__div>
           </card div>                                                                     
-#5. [search__div] Inside the search__div put a lightning input with:
+#6. [search__div] Inside the search__div put a lightning input with:
                   a. label 'Pokemon Name'
                   b. value: pokemonName (variable initialized to 'charizard')
                   c. onchange: handleChange (handler method, parameter event)
                   d. class="slds-m-right_xx-small"
 
-#6. [search__div] Inside the search__div, after the input put a lightning button with:
+#7. [search__div] Inside the search__div, after the input put a lightning button with:
                   a. label 'Search Pokemon'
                   b. variant: "brand"
                   c. onclick: searchPokemon (handler method, parameter event)
                   d. disabled: disableSearch (variable initialized to false)
-#7. [.js] In your javascript file make sure that your variables and handler methods exist if not add them.
-#8. [results-header__div] Inside the results-header__div add 4 columns with the same space using the instructions of the slds-grid
+#8. [.js] In your javascript file make sure that your variables and handler methods exist if not add them.
+#9. [results-header__div] Inside the results-header__div add 4 columns with the same space using the instructions of the slds-grid
 (https://www.lightningdesignsystem.com/utilities/grid/) each one of them must have additional class slds-text-heading_small and the labels of this elements should be: Name, Appearance, Abilities, Stats.
-#9. [results-data__div] we want to show this div only if data exist:
+#10. [results-data__div] we want to show this div only if data exist:
     a. bind the div with an if directive and show it only if the hasData variable is true Initialized the variable to false
     b. put the following div after the results-data__div closing tab
       <div lwc:else class="slds-m-around_large">
         {errorMessage}
       </div>
-#10. Inside the results data div put the following code:
+#11. Inside the results data div put the following code:
       <div class="slds-size_1-of-4 slds-align-middle">
         print pokemon's name
       </div>
@@ -56,7 +56,7 @@
           </template>
         </ul>
       </div>
-#11. Your html is almost done.... Put a lightning spinner inside the card-body__div and before anything else. The spinner will take a variable spinner initialized to false. We will use it to inform the user that something is loading......
+#12. Your html is almost done.... Put a lightning spinner inside the card-body__div and before anything else. The spinner will take a variable spinner initialized to false. We will use it to inform the user that something is loading......
 
 
 
