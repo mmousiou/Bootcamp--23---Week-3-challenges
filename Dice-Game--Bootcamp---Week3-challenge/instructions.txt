@@ -1,0 +1,41 @@
+talk about variables and onclick events in LWC framework 
+
+-----------------------------------------------------------------------------------------------
+===> diceGameChallenge.html file
+-----------------------------------------------------------------------------------------------
+#1. Set the score variable scoreP2 for P2. (html - l19)
+#2. Set the current score variable currentP2 for P2. (html - l23)
+#3. Connect the handleRollBtnClicked and handleHoldBtnClicked functions to the appropriates button elements
+
+-----------------------------------------------------------------------------------------------
+===> diceGameChallenge.js file
+-----------------------------------------------------------------------------------------------
+#4. Initialize the variables scoreP1, scoreP2, currentP1, currentP2 to  0.
+#5. Remove the player--winner class from player1 and plaeyer2 elements
+#6. Create the basic algorith of the user roll dice 
+          a. if diceNum is not equal to 1 
+              i. add to the current score (currentScore variable) the diceNum.
+             ii. assign the currentScore variable to the current score of the active player
+                Help: if this activePlayer is P1 assign the current score to currentP1 variable.
+                      if this activePlayer is P2 asign the current score to currentP2 variable.
+                      (Hint: currentP1 = current + P1 and activePlayer is either P1 or P2 strings 💣)
+          b. if diceNum is equal to 1 according yo the flow chart we must switch the player so
+              the switchPlayer function must be called.
+#7. Complete the user holds score algorithm:
+          a. Add the current score to the score of the active player.
+              Hint: For example if the active player is P1 we want to add the currentScore to the scoreP1 variable
+          b. If the score of the active player is greater or equal than 100
+              i. set the playing variable to false
+             ii. select the game element and add hidden class
+            iii. select the active player element and add the 'player--winner' class and remove the  'player--active' class.
+             iv. select the name+ActivePlayer--winner element and remove the hidden class
+          c. if the score of the active player is lower than 100 the switchPlayer function must be called.
+#8. Complete the switch player logic:
+          a. set the current+Active player score to 0
+          b. set the currentScore to zero
+          c. we must switch the activePlayer!!
+            i. if the current activePlayer is 'P1' the activePlayer must be set to 'P2'
+           ii. if the current activePlayer is 'P2' the activePlayer must be set to 'P1'
+
+
+Talk about how to improve the code using template literals (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) and ternary operator (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator).

@@ -1,29 +1,33 @@
-<!-- Dice Game App - Solution -->
 <template>
   <div class="body">
     <div class="main">
       <!-- player1 - screen -->
-      <div class="player playerP0 player--active">
-        <h2 class="name" data-id="nameP0">Player 1</h2>
-        <p class="score" data-id="scoreP0">{scoreP0}</p>
-        <div class="current">
-          <p class="current-label">Current</p>
-          <p class="current-score" data-id="currentP0">{currentP0}</p>
-        </div>
-      </div>
-      <!-- player2 - screen -->
-      <div class="player playerP1">
-        <h2 class="name" data-id="nameP1">Player 2</h2>
+      <div class="player playerP1 player--active">
+        <h2 class="name" data-id="nameP1">
+          <span class="nameP1--winner hidden">🏆</span>
+          Player 1</h2>
         <p class="score" data-id="scoreP1">{scoreP1}</p>
         <div class="current">
           <p class="current-label">Current</p>
           <p class="current-score" data-id="currentP1">{currentP1}</p>
         </div>
       </div>
+      <!-- player2 - screen -->
+      <div class="player playerP2">
+        <h2 class="name" data-id="nameP2"><span class="nameP2--winner hidden">🏆</span>Player 2</h2>
+        <!-- #1. Set the score variable scoreP2 for P2. (html - l19) -->
+        <p class="score" data-id="scoreP2"></p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <!-- #2. Set the current score variable currentP2 for P2. (html - l23) -->
+          <p class="current-score" data-id="currentP2"></p>
+        </div>
+      </div>
       <!-- buttons -->
       <button class="btn btn--new" onclick={handleNewBtnClicked}>🔄 New game</button>
-      <button class="btn btn--roll" onclick={handleRollBtnClicked}>🎲 Roll dice</button>
-      <button class="btn btn--hold" onclick={handleHoldBtnClicked}>📥 Hold</button>
+      <!-- #3. Connect the handleRollBtnClicked and handleHoldBtnClicked functions to the appropriates button elements -->
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
     </div>
   </div>
   <!-- 3D dice -->

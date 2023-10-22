@@ -20,7 +20,7 @@ iframe {
   font-size: 40%;
   box-sizing: border-box;
   font-weight: 400;
-  height: calc(100vh - 180px);
+  height: 100vh;
   color: #333;
   background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
   display: flex;
@@ -32,7 +32,7 @@ iframe {
 .main {
   zoom:70%;
   position: absolute;
-  top: 190px;
+  top: 110px;
   width: 100rem;
   height: 60rem; 
   background-color: rgba(255, 255, 255, 0.35);
@@ -47,7 +47,7 @@ iframe {
 @media (min-width: 100rem) {
   .game {
     /* zoom: 81%; */
-    top: 350px;
+    top: 290px;
   }
 }
 
@@ -57,7 +57,7 @@ iframe {
   }
   .game {
     zoom: 81%;
-    top: 300px;
+    top: 280px;
   }
 }
 
@@ -67,7 +67,7 @@ iframe {
   }
   .game {
     zoom: 70%;
-    top:300px;
+    top:270px;
   }
 }
 
@@ -109,6 +109,8 @@ iframe {
 
 .player--active {
   background-color: rgba(255, 255, 255, 0.4);
+  border-style: double;
+  border-color: rgba(255, 255, 255, 0.596);
 }
 .player--active .name {
   font-weight: 700;
@@ -199,15 +201,6 @@ iframe {
 
 .btn:focus {
   outline: none;
-}
-
-.dicePic {
-  position: absolute;
-  left: 50%;
-  top: 16.5rem;
-  transform: translateX(-50%);
-  height: 10rem;
-  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
 
 .player--winner {

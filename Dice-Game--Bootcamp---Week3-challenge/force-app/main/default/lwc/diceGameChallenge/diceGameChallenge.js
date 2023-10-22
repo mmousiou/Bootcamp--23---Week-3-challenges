@@ -1,28 +1,59 @@
 /**
- * @title Dice Game App - Solution
- * @author mmousiou@gmail.com (Maria Mousiou)
- * @fileoverview js file for the app
- * @version  Solution_v1
+ * @title Dice Game App - Challenge
+ * @description Steps 25, duration: ~ 1h)
+ * @tutorial the comments including #number must be done by you the normal comments are there to help you understand the use of the elements, variables and methods in the js file
+ * @author yourName 👽
+ * @version  v1
  */
 import { LightningElement } from 'lwc'
 
 const DICE_ARRAY = [0,1,5,6,3,4,2]
 
-export default class PigGame extends LightningElement {
+export default class DiceGame extends LightningElement {
 
-  // initialize variables
-  scoreP0 = 43
-  scoreP1 = 24
-  currentP0 = 0
-  currentP1 = 0
-  scores = { P0: 0, P1: 0 }
-  currentScore = 0
-  activePlayer = 'P0'
+  /* 🆘 
+     * to call in the js file a method or a variable of DiceGame class the this keyworkd
+        must be used. 
+     * instead of using the document.querySelector method in LWC framework we use 
+        this.template.querySelector method
+  */
+
+  scoreP1 = 13 //variable to store 1st player's score
+  scoreP2 = 24 //variable to store 2nd player's score
+  currentP1 = 0 //variable to store first player's current score
+  currentP2 = 0 //variable to store second player's current score
+  activePlayer = 'P1' //variable to store active player
+  currentScore = 0 //vaiable to store current dice number
   playing = true
 
   handleNewBtnClicked (e) {
-    console.log('Button was clicked')
+    // call the init method when the new game btn is clicked
     this.init()
+  }
+
+  init () {
+    // this function will initialize the game variables and classes of the elements
+    this.playing = true
+    this.currentScore = 0
+    this.activePlayer = 'P1'
+    /* #4. Initialize the variables scoreP1, scoreP2, currentP1, currentP2 to  0. */
+
+    const player1El = this.template.querySelector('.playerP1')
+    const player2El = this.template.querySelector('.playerP2')
+
+    // select the game element and remove the hidden class (we add the hidden class when the game is over)
+    const gameEl = this.template.querySelector('.game')
+    gameEl.classList.remove('hidden')
+
+    /* #5. Remove the player--winner class from player1 and plaeyer2 elements */
+
+    // hide the win icons added on player divs my adding the hidden class to nameP1-winner and name---p2 elements
+    this.template.querySelector('.nameP1--winner').classList.add('hidden');
+    this.template.querySelector('.nameP2--winner').classList.add('hidden');
+
+    // the player active class is initialy assigned to player1 so we must add it to player 1 element and remove it from player 2 element
+    player1El.classList.add('player--active')
+    player2El.classList.remove('player--active')
   }
 
   sleep (ms) {
@@ -32,14 +63,12 @@ export default class PigGame extends LightningElement {
   }
 
   async handleRollBtnClicked (e) {
-    console.log('Roll Button was clicked')
     if (this.playing) {
-
-      const diceEl = this.template.querySelector('[data-id="dice1"]')
+      // choose a random dice side (it doesn't correspond to the number shown on the dice that's why we use the transformation on DICE_ARRAY)
       const diceSide = Math.floor((Math.random() * 6) + 1)
-
-      console.log(diceSide)
-
+      console.loe('Dice side: ' , diceSide)
+      // make the 3D dice roll!!!
+      const diceEl = this.template.querySelector('[data-id="dice1"]')
       for (var i = 1; i <= 6; i++) {
         diceEl.classList.remove('show-' + i)
         if (diceSide === i) {
@@ -47,87 +76,50 @@ export default class PigGame extends LightningElement {
         }
       }
 
-      await this.sleep(1100)
+      await this.sleep(1100) // we want to have a small delay in assigning the numbers due to the rolling of the dice
       const diceNum = DICE_ARRAY[diceSide]
-      console.log(diceNum)
 
-      if (diceNum !== 1) {
-        // Add dice to current score
-        this.currentScore += diceNum
-        //save current score to current player
-        this[`current${this.activePlayer}`] = this.currentScore
-      } else {
-        // Switch to next player
-        this.switchPlayer()
-      }
+      /* #6. Complete the basic algorith of the user roll dice 
+          a. if diceNum is not equal to 1 
+              i. add to the current score (currentScore variable) the diceNum.
+             ii. assign the currentScore variable to the current score of the active player
+                Help: if this activePlayer is P1 assign the current score to currentP1 variable.
+                      if this activePlayer is P2 asign the current score to currentP2 variable.
+                      (Hint: currentP1 = current + P1 and activePlayer is either P1 or P2 strings 💣)
+          b. if diceNum is equal to 1 according yo the flow chart we must switch the player so
+              the switchPlayer function must be called.
+      */
     }
   }
 
   handleHoldBtnClicked (e) {
-    console.log('Button hold was clicked')
     if (this.playing) {
-      // 1. Add current score to active player's score
-      this.scores[this.activePlayer] = this.scores[this.activePlayer] + this.currentScore
-      // scores[1] = scores[1] + currentScore
-  
-      this[`score${this.activePlayer}`] = this.scores[this.activePlayer]
-  
-      // 2. Check if player's score is >= 100
-      if (this.scores[this.activePlayer] >= 30) {
-        // Finish the game
-        this.playing = false
-
-        const gameEl = this.template.querySelector('.game')
-        gameEl.classList.add('hidden');
-  
-        this.template.querySelector(`.player${this.activePlayer}`)
-          .classList.add('player--winner');
-        this.template.querySelector(`.player${this.activePlayer}`)
-          .classList.remove('player--active');
-      } else {
-        // Switch to the next player
-        this.switchPlayer();
-      }
+      /* #7. Complete the user holds score algorithm:
+          a. Add the current score to the score of the active player.
+              Hint: For example if the active player is P1 we want to add the currentScore to the scoreP1 variable
+          b. If the score of the active player is greater or equal than 100
+              i. set the playing variable to false
+             ii. select the game element and add hidden class
+            iii. select the active player element and add the 'player--winner' class and remove the  'player--active' class.
+             iv. select the name+ActivePlayer--winner element and remove the hidden class
+          c. if the score of the active player is lower than 100 the switchPlayer function must be called.
+      */
     }
   }
 
-  init () {
-    this.playing = true
-    this.scores = { P0: 0, P1: 0 }
-    this.currentScore = 0
-    this.activePlayer = 'P0'
-
-    const player0El = this.template.querySelector('.playerP0')
-    const player1El = this.template.querySelector('.playerP1')
-
-    const gameEl = this.template.querySelector('.game')
-    gameEl.classList.remove('hidden')
-
-    player0El.classList.remove('player--winner')
-    player1El.classList.remove('player--winner')
-
-    this.scoreP0 = 0
-    this.scoreP1 = 0
-    this.currentP0 = 0
-    this.currentP1 = 0
-
-    this.hideDice = true
-    
-    player0El.classList.add('player--active')
-    player1El.classList.remove('player--active')
-  }
-
-  connectedCallback () {
-    console.log('Connected is called!!')
-  }
-
   switchPlayer () {
-    this[`current${this.activePlayer}`] = 0
-    this.currentScore = 0
-    this.activePlayer = this.activePlayer === 'P0' ? 'P1' : 'P0'
-    const player0El = this.template.querySelector('.playerP0')
+    /* #8. Complete the switch player logic:
+          a. set the current+Active player score to 0
+          b. set the currentScore to zero
+          c. we must switch the activePlayer!!
+            i. if the current activePlayer is 'P1' the activePlayer must be set to 'P2'
+           ii. if the current activePlayer is 'P2' the activePlayer must be set to 'P1'
+    */
+
+    // toggle classes
     const player1El = this.template.querySelector('.playerP1')
-    player0El.classList.toggle('player--active');
+    const player2El = this.template.querySelector('.playerP2')
     player1El.classList.toggle('player--active');
+    player2El.classList.toggle('player--active');
   }
 }
