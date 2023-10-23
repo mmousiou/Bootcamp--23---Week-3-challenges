@@ -1,7 +1,7 @@
 /**
  * @title Dice Game App - Challenge
  * @description Steps 25, duration: ~ 1h)
- * @tutorial the comments including #number must be done by you the normal comments are there to help you understand the use of the elements, variables and methods in the js file
+ * @tutorial the comments including TODO must be done by you the normal comments are there to help you understand the use of the elements, variables and methods in the js file
  * @author yourName 👽
  * @version  v1
  */
@@ -36,7 +36,7 @@ export default class DiceGame extends LightningElement {
     this.playing = true
     this.currentScore = 0
     this.activePlayer = 'P1'
-    /* #4. Initialize the variables scoreP1, scoreP2, currentP1, currentP2 to  0. */
+    /* TODO #4. Initialize the variables scoreP1, scoreP2, currentP1, currentP2 to  0. */
 
     const player1El = this.template.querySelector('.playerP1')
     const player2El = this.template.querySelector('.playerP2')
@@ -45,7 +45,7 @@ export default class DiceGame extends LightningElement {
     const gameEl = this.template.querySelector('.game')
     gameEl.classList.remove('hidden')
 
-    /* #5. Remove the player--winner class from player1 and plaeyer2 elements */
+    /* TODO #5. Remove the player--winner class from player1 and plaeyer2 elements */
 
     // hide the win icons added on player divs my adding the hidden class to nameP1-winner and name---p2 elements
     this.template.querySelector('.nameP1--winner').classList.add('hidden');
@@ -79,7 +79,7 @@ export default class DiceGame extends LightningElement {
       await this.sleep(1100) // we want to have a small delay in assigning the numbers due to the rolling of the dice
       const diceNum = DICE_ARRAY[diceSide]
 
-      /* #6. Complete the basic algorith of the user roll dice 
+      /* TODO #6. Complete the basic algorith of the user roll dice 
           a. if diceNum is not equal to 1 
               i. add to the current score (currentScore variable) the diceNum.
              ii. assign the currentScore variable to the current score of the active player
@@ -94,7 +94,7 @@ export default class DiceGame extends LightningElement {
 
   handleHoldBtnClicked (e) {
     if (this.playing) {
-      /* #7. Complete the user holds score algorithm:
+      /* TODO #7. Complete the user holds score algorithm:
           a. Add the current score to the score of the active player.
               Hint: For example if the active player is P1 we want to add the currentScore to the scoreP1 variable
           b. If the score of the active player is greater or equal than 100
@@ -108,7 +108,7 @@ export default class DiceGame extends LightningElement {
   }
 
   switchPlayer () {
-    /* #8. Complete the switch player logic:
+    /* TODO #8. Complete the switch player logic:
           a. set the current+Active player score to 0
           b. set the currentScore to zero
           c. we must switch the activePlayer!!

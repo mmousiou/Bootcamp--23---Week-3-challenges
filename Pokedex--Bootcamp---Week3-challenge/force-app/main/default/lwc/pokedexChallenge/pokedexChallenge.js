@@ -17,12 +17,14 @@ export default class Pokemon extends LightningElement {
   get disableSearch () { return !this.pokemonName }
 
   async initializeApp () {
-    /*  * initialize pockemon name to 'charizard'
+    /* TODO:  
+        * initialize pockemon name to 'charizard'
         * call fetch data!! */
   }
 
   handleChange (event) {
-    /*  * store in the pockemon name variable the user's input
+    /*  TODO: 
+        * store in the pockemon name variable the user's input
         * you can access the input by using event.detail.value 
         * help link: https://developer.salesforce.com/docs/component-library/bundle/lightning-input/example
     */
@@ -30,22 +32,24 @@ export default class Pokemon extends LightningElement {
 
   async fetchData () {
     try {
-      /* add spinner's loading */
-      /*  * call retrievePokemon apex method using async...await and assign the method to a variable named resp
+      /* TODO: add spinner's loading */
+      /* TODO:  
+          * call retrievePokemon apex method using async...await and assign the method to a variable named resp
           * help link: https://www.sfdcblogs.com/post/async-and-await-in-lightning-web-components
       */
       
-      /* console log the response to see what data you get*/
+      /* TODO: console log the response to see what data you get*/
       if (resp.statusCode === 404) {
         // in this case we didn't find the pokemon in the database so no results div should be displayed
         this.hasData = false
         // we want to notify the user
-        /*   * Use lightning alert to notify the users, message will be the errorMessage,
-            the theme should be warning. Give your prefered title. 
+        /* TODO:   
+              * Use lightning alert to notify the users, message will be the errorMessage,
+                the theme should be warning. Give your prefered title. 
              * help link: https://developer.salesforce.com/docs/component-library/bundle/lightning-alert/documentation */
       } else {
         // in this case we have data to show
-        /** From the response data we want to take the following data:
+        /** TODO: From the response data we want to take the following data:
             *  the species name
             *  the image (front_default) that is stored in the sprites object
             *  from the abilities attribute we want an array with only the ability (hint: use Array.prototype.map to take it)

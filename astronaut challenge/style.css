@@ -10,7 +10,7 @@ body{
   justify-content:center;
 }
 
-/* #5. add a class name hidden which will modify the display attribute to none */
+/* TODO #5. add a class name hidden which will modify the display attribute to none */
 
 .title {
   position:absolute;
