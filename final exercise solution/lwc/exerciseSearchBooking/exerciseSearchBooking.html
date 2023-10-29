@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Search Bookings">
+        <lightning-input class="slds-p-around_medium" name="AccountName" label="Account Name" type="text" value={accountName} onchange={accountNameChangeHandler}></lightning-input>
+        <lightning-input class="slds-p-around_medium" name="DateFrom" label="Date From" type="date" value={dateFrom} onchange={dateFromChangeHandler}></lightning-input>
+        <lightning-input class="slds-p-around_medium" name="DateTo" label="Date To" type="date" value={dateTo} onchange={dateToChangeHandler}></lightning-input>
+        <lightning-combobox class="slds-p-around_medium" name="ServiceType" label="Service Type" options={serviceTypeOptions} value={serviceType} onchange={serviceTypeChangeHandler}></lightning-combobox>
+        <div class="slds-align_absolute-center">
+            <lightning-button class="slds-p-around_medium" name="Search"  label="Search" onclick={searchButtonClickHandler}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Bookings">
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}
+                onrowaction={cancelBookingHandler}
+                hide-checkbox-column>
+        </lightning-datatable>
+    </lightning-card>
+</template>

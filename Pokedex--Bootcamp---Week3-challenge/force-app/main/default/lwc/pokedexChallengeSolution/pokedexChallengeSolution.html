@@ -8,7 +8,7 @@
         <!-- search pokemon -->
         <div
           style="display:flex;flex-direction:row;justify-content:flex-start;align-items:flex-end; margin-bottom: 1rem;">
-          <lightning-input onchange={handleChange} value={pokemonName} label="Pokemon Name"
+          <lightning-input data-property="pokemon" onchange={handleChange} value={pokemonName} label="Pokemon Name"
             class="slds-m-right_xx-small"></lightning-input>
           <lightning-button variant="brand" label="Search Pokemon" onclick={searchPokemon}
             disabled={disableSearch}></lightning-button>

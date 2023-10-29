@@ -26,6 +26,8 @@ export default class Pokemon extends LightningElement {
   }
 
   handleChange (event) {
+    const prop = event.target.dataset.property
+    console.log('data property: ', prop)
     this.pokemonName = event.detail.value
   }
 
